@@ -1,0 +1,17 @@
+package Lista8;
+
+import java.util.Scanner;
+
+public class somaImposto {
+    public static void main(String[] args) {
+    System.out.println("O custo com a taxa de imposto é de: " + somaImposto(0.0,0.0));;    
+    }
+    public static Double somaImposto(Double taxaImposto, Double custo){
+    Scanner scanner = new Scanner(System.in);
+    System.out.println("Digite a taxa de imposto sobre o produto(Em porcentagem %)");
+    taxaImposto = scanner.nextDouble() / 100;
+    System.out.println("digite o custo do produto");
+    custo = scanner.nextDouble();
+    return custo +=( custo * taxaImposto);
+    }
+}
