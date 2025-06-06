@@ -1,0 +1,11 @@
+package Lista8;
+
+public class TresArgumentos {
+    public static void main(String[] args) {
+    soma(4, 6, 5);    
+    }
+    public static void soma(int num1,int num2,int num3){
+       int adicao = num1 + num2 + num3;
+       System.out.println("A soma dos números é: " + adicao);
+    }
+}
