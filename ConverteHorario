@@ -1,0 +1,37 @@
+package Lista8;
+
+import java.util.Scanner;
+
+public class ConverteHorario {
+public static void main(String[] args) {
+Scanner scanner = new Scanner(System.in);
+String resposta = "";
+
+do{System.out.println("Digite a hora para conversão:");
+int hora = scanner.nextInt();
+System.out.println("Digite os minutos para a conversão:");
+int minuto = scanner.nextInt();
+int horaConvert = converteHora(hora);
+char periodo = obterPeriodo((char) 0, hora);
+mostrarHora(horaConvert, minuto, periodo);
+System.out.println("Deseja converter outro horário?");
+resposta = scanner.next();
+}while(resposta.equals("sim"));
+}   
+
+public static int converteHora(int hora){
+Scanner scanner = new Scanner(System.in);
+if (hora >12 && hora <= 24) {
+return hora - 12;   
+}
+return hora;
+}
+public static char obterPeriodo( char periodo, int hora){
+return  (hora <= 12) ? periodo =  'A':'P';
+} 
+public static void mostrarHora(int hora, int minuto, char periodo ){
+String periodoconvert = (periodo == 'A') ? "A.M." : "P.M.";
+System.out.println("Hora convertida: " + hora + ":" + minuto + " " + periodoconvert);
+}
+
+}
