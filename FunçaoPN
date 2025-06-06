@@ -1,0 +1,15 @@
+package Lista8;
+
+import java.util.Scanner;
+
+public class FuncaoPN {
+    public static void main(String[] args) {
+    System.out.println("Resultado: " + numero(0));       
+    }
+    public static String numero(int num){
+    Scanner scanner = new Scanner(System.in);
+    System.out.println("Digite um número");
+    num = scanner.nextInt();
+    return (num >0) ? "P" :"R";
+    }
+}
